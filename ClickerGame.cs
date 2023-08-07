@@ -19,21 +19,4 @@ public class ClickerGame
             runCommand.RunCommand(command, this);
         }
     }
-
-    public int XChar()
-    {
-        return 0;
-    }
-    public int KChar()
-    {
-        return 0;
-    }
-    public int SChar()
-    {
-        return 0;
-    }
-    public int SpaceChar()
-    {
-        return 0;
-    }
 }

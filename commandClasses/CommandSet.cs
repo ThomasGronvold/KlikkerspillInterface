@@ -10,10 +10,10 @@ public class CommandSet
     {
         CommandArray = new ICommand[4]
         {
-            new BuySuperUpgrade(),
-            new BuyUpgrade(),
             new CloseProgram(),
-            new GetPoints()
+            new GetPoints(),
+            new BuyUpgrade(),
+            new BuySuperUpgrade(),
         };
     }
 
@@ -21,19 +21,19 @@ public class CommandSet
     {
         if (Command == 'X')
         {
-            CommandArray[2].Run(game);
+            CommandArray[0].Run(game);
         }
         else if (Command == ' ')
         { 
-            CommandArray[3].Run(game);
+            CommandArray[1].Run(game);
         }
         else if (Command == 'K' && game.points >= 10)
         {
-            CommandArray[1].Run(game);
+            CommandArray[2].Run(game);
         }
         else if (Command == 'S' && game.points >= 100)
         {
-            CommandArray[0].Run(game);
+            CommandArray[3].Run(game);
         }
     }
 }
